@@ -1,0 +1,69 @@
+﻿@model List<ResultBannerDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ana sayfa banner alanı</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Banner başlığı</th>
+                                        <th>Banner Açıklaması</th>
+                                        <th>Video url</th>
+                                        <th>Video Açıklaması</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                        <th>Videoyu youtube de aç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.Title</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.VideoUrl</td>
+                                                <td>@item.VidepDescription</td>
+                                                <td><a href="/Admin/AdminBanner/DeleteBanner/@item.BannerId" class="btn btn-outline-danger">Sil</a></td>
+                                                <td><a href="/Admin/AdminBanner/UpdateBanner/@item.BannerId" class="btn btn-outline-success">Güncelle</a></td>
+                                                <td><a href="@item.VideoUrl" class="btn btn-outline-success">Videoyu izle</a></td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="row">-</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            @if (Model.Count == 0)
+                            {
+                                <td><a href="/Admin/AdminBanner/CreateBanner" class="btn btn-outline-primary">Yeni banner girişi</a></td>
+                            }
+                            else
+                            {
+                                
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿@model GetBlogByIdDto
+
+<div class="col-md-8 ftco-animate">
+    <h2 class="mb-3">@Model.Title</h2>
+    @if (Model != null)
+    {
+         <p>
+            <img src="@Model.CoverImageUrl" alt="" class="img-fluid">
+        </p>
+        <p>@Model.Description</p>
+
+    }
+    else
+    {
+        <p>Blog detayına ulaşılamıyor</p>
+    }
+
+
+    @await Component.InvokeAsync("BlogDetailAuthorDetailComponentPartial",new { id = ViewBag.Blogid })
+
+
+
+
+    <div class="pt-5 mt-5">
+        
+        @await Component.InvokeAsync("BlogDetailCommandComponentPartial", new { id = ViewBag.Blogid })
+@*         @await Component.InvokeAsync("BlogDetailCreateCommandComponentPartial")
+ *@
+ @await Html.PartialAsync("~/Views/Blog/AddComment.cshtml", new { id = ViewBag.Blogid })
+
+
+    </div>
+
+</div> 

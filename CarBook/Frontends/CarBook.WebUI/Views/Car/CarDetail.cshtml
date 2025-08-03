@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "CarDetail";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<section class="ftco-section ftco-car-details">
+	<div class="container">
+		@await Component.InvokeAsync("CarDetailMainCarFeature", new { id = ViewBag.CarId })
+		<div class="row">
+			<div class="col-md-12 pills">
+				<div class="bd-example bd-example-tabs">
+					<div class="d-flex justify-content-center">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+							<li class="nav-item">
+								<a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Araba Özellikleri</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Açıklama</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">youmlar</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-content" id="pills-tabContent">
+						@await Component.InvokeAsync("CarDetailCarFeature", new { id = ViewBag.CarId })
+						@await Component.InvokeAsync("CarDetailCarDescription", new { id = ViewBag.CarId })
+						@await Component.InvokeAsync("CarDetailCarReview", new { id = ViewBag.CarId })
+						
+
+						
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

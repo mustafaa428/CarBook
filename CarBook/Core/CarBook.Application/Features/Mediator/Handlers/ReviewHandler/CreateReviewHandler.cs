@@ -1,0 +1,30 @@
+﻿using CarBook.Application.Features.Mediator.Commands.ReviewCommands;
+using CarBook.Application.Interfaces;
+using CareBook.Domain.Entities;
+using MediatR;
+
+namespace CarBook.Application.Features.Mediator.Handlers.ReviewHandler
+{
+    public class CreateReviewHandler : IRequestHandler<CreateReviewCommand>
+    {
+        private readonly IRepository<Review> _repository;
+
+        public CreateReviewHandler(IRepository<Review> repository)
+        {
+            _repository = repository;
+        }
+
+        public async Task Handle(CreateReviewCommand request, CancellationToken cancellationToken)
+        {
+            await _repository.CreateAsync(new Review
+            {
+                CarId = request.CarId,
+                Comment = request.Comment,
+                CustomerImage = request.CustomerImage,
+                CustomerName = request.CustomerName,
+                ReviewDate = DateTime.Parse(DateTime.Now.ToShortDateString()),
+                RaitingValue = request.RaitingValue
+            });
+        }
+    }
+}

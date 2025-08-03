@@ -1,0 +1,41 @@
+﻿@model UpdateFooterAddressDto
+@{
+    ViewData["Title"] = "UpdateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Alt bilgi güncelleme sayfası</h4>
+                        <form method="post">
+                            <input type="hidden" asp-for="FooterAddressId" />
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Email</label>
+                                <input type="email" class="form-control" id="exampleInputLuggage" asp-for="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Telefon</label>
+                                <input type="tel" class="form-control" id="exampleInputLuggage" asp-for="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputLuggage" asp-for="Description">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Adres bilgisi</label>
+                                <input type="text" class="form-control" id="exampleInputLuggage" asp-for="Address">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Alt bilgileri güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

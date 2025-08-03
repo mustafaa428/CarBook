@@ -1,0 +1,19 @@
+﻿@model List<ResultCategoryDto>
+<div class="sidebar-box ftco-animate">
+    <div class="categories">
+        <h3>Categories</h3>
+        @if(Model != null && Model.Any())
+        {
+            foreach(var item in Model)
+            {
+                <li><a href="#">@item.name <span>(0)</span></a></li>
+
+            }
+        }
+        else
+        {
+            <p></p>
+        }
+
+    </div>
+</div>

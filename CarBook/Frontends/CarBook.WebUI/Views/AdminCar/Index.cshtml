@@ -1,0 +1,71 @@
+﻿@model List<ResultGetCarWithBrandDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araba Listesi</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Fotoğrafı</th>
+                                        <th>Marka Adı</th>
+                                        <th>Model Adı</th>
+                                        <th>Km</th>
+                                        <th>Vites türü</th>
+                                        <th>Detaylar</th>
+                                        <th>Araca Özellik ata</th>
+                                        <th>Sitede gör</th>
+                                        <th>Fiyatları gör</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <th scope="row">@count</th>
+                                                <td><img src="@item.coverImageUrl" alt="" style="height:75px; width:100px" /></td>
+                                                <td>@item.brandName</td>
+                                                <td>@item.model</td>
+                                                <td>@item.km</td>
+                                                <td>@item.transmission</td>
+                                                <td><a href="/Admin/AdminCarFeatureDetail/Index/@item.carId" class="btn btn-outline-info">Detaylar</a></td>
+                                                <td><a href="/Admin/AdminCarFeatureDetail/CreateCarFeatureByCarId/@item.carId" class="btn btn-outline-warning">Özelliği ata</a></td>
+                                                <td><a href="#" class="btn btn-outline-secondary">Sitede gör</a></td>
+                                                <td><a href="#" class="btn btn-outline-dark">Fiyat bilgileri</a></td>
+
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="row">-</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <td><a href="/AdminCar/CreateCar" class="btn btn-outline-primary">Araba ekle</a></td>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

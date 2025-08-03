@@ -1,0 +1,11 @@
+D:\UdemyProje\CarBook\Core\CareBook.Domain\bin\Debug\net8.0\CareBook.Domain.deps.json
+D:\UdemyProje\CarBook\Core\CareBook.Domain\bin\Debug\net8.0\CareBook.Domain.dll
+D:\UdemyProje\CarBook\Core\CareBook.Domain\bin\Debug\net8.0\CareBook.Domain.pdb
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.AssemblyInfoInputs.cache
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.AssemblyInfo.cs
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.csproj.CoreCompileInputs.cache
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.dll
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\refint\CareBook.Domain.dll
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\CareBook.Domain.pdb
+D:\UdemyProje\CarBook\Core\CareBook.Domain\obj\Debug\net8.0\ref\CareBook.Domain.dll

@@ -1,0 +1,69 @@
+﻿@model List<ResultBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ana sayfa Blog alanı</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kapak fotoğrafı</th>
+                                        <th>Yazar adı</th>
+                                        <th>Blog Başlığı</th>
+                                        <th>Blog açıklaması</th>
+                                        <th>Kategori adı</th>
+                                        <th>Oluşturma tarihi</th>
+                                        <th>Kaldır</th>
+                                        <th>Blogu aç</th>
+                                        <th>Yorumlar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <td>@count</td>
+                                                <td><img src="@item.CoverImageUrl" alt="Alternate Text" style="height:75px; width:75px"/></td>
+                                                <td>@item.AuthorName</td>
+                                                <td>@item.Title</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.CategoryName</td>
+                                                <td>@item.CreateTime</td>
+                                                <td><a href="/Admin/AdminBlog/DeleteBlog/@item.BlogId" class="btn btn-outline-danger">Kaldır</a></td>
+                                                <td><a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-outline-success">Blogu gör</a></td>
+                                                <td><a href="/Admin/AdminComment/Index/@item.BlogId" class="btn btn-outline-success">Yorumları gör</a></td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="row">-</th>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

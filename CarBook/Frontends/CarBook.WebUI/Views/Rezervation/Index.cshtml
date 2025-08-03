@@ -1,0 +1,49 @@
+﻿@using CarBook.Dto.RezervationDtos
+@model CreateRezervationDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<div class="col-md-12 block-9 mb-md-5">
+    <form class="bg-light p-5 contact-form" method="post">
+        <div class="form-group">
+            <h2>Rezervasyon bilgi kayıt formu</h2>
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="CarId" value="@ViewBag.carId" class="form-control"  placeholder="Almak istediğiniz araba">
+        </div>
+        <div class="form-group">
+            <input type="text" asp-for="Name" class="form-control" placeholder="Adınız">
+        </div>
+        <div class="form-group">
+            <input type="text" asp-for="Surname" class="form-control" placeholder="Soyadınız">
+        </div>
+        <div class="form-group">
+            <input type="email" asp-for="Email" class="form-control" placeholder="Mail Adresiniz">
+        </div>
+        <div class="form-group">
+            <input type="tel" asp-for="Phone" class="form-control" placeholder="Telefon Numaranız">
+        </div>
+        <div class="form-group">
+            @Html.DropDownListFor(x => x.DropOffLocationId, (List<SelectListItem>)ViewBag.v, "Aracı teslim edeceğiniz lokasyonu seçiniz", new { @class = "form-control", style = "color:black ", name = "LocationId" })
+
+        </div>
+        <div class="form-group">
+            @Html.DropDownListFor(x => x.PickUpLocationId, (List<SelectListItem>)ViewBag.v, "Aracı alacağınız lokasyonu seçiniz", new { @class = "form-control", style = "color:black;" })
+
+        </div>
+        <div class="form-group">
+            <input type="number" asp-for="Age" class="form-control" placeholder="Yaşınız">
+        </div>
+        <div class="form-group">
+            <input type="text" asp-for="DriverLicanseYear" class="form-control" placeholder="Ehliyet Yılınız">
+        </div>
+        <div class="form-group">
+            <textarea asp-for="Description" id="" cols="30" rows="5" class="form-control" placeholder="Varsa Eklemek İstedikleriniz"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Rezervasyonu tamamla" class="btn btn-primary py-3 px-5">
+        </div>
+    </form>
+</div>

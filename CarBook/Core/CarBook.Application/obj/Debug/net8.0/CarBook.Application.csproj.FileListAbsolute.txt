@@ -1,0 +1,15 @@
+D:\UdemyProje\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.deps.json
+D:\UdemyProje\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.dll
+D:\UdemyProje\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CarBook.Application.pdb
+D:\UdemyProje\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CareBook.Domain.dll
+D:\UdemyProje\CarBook\Core\CarBook.Application\bin\Debug\net8.0\CareBook.Domain.pdb
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.csproj.AssemblyReference.cache
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.AssemblyInfoInputs.cache
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.AssemblyInfo.cs
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.csproj.CoreCompileInputs.cache
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook..F1F8929D.Up2Date
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.dll
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\refint\CarBook.Application.dll
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\CarBook.Application.pdb
+D:\UdemyProje\CarBook\Core\CarBook.Application\obj\Debug\net8.0\ref\CarBook.Application.dll
